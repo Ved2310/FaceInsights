@@ -1,0 +1,10 @@
+{
+	"projects": {
+		"pinsight": {
+			"rootDirectory": "pinsight"
+		},
+		"backend": {
+			"apiRootDirectory": "backend"
+		}
+	}
+}

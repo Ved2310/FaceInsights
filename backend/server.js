@@ -30,7 +30,7 @@ const app = express();
 
 app.use(
     cors({
-        origin: 'http://localhost:3000', // Adjust to match your frontend origin
+        origin: 'https://face-insights-672i-three.vercel.app/', // Adjust to match your frontend origin
         credentials: true,
         methods: ['GET', 'POST'],
         allowedHeaders: ['Content-Type', 'Authorization'],
@@ -41,7 +41,7 @@ app.use(bodyParser.json());
 const PORT = 5000;
 const CLIENT_ID = '1508966'; // Replace with your Pinterest Client ID
 const CLIENT_SECRET = process.env.PINTREST_API_KEY; // Replace with your Pinterest Client Secret
-const REDIRECT_URI = 'http://localhost:5000/auth/pinterest/callback';
+const REDIRECT_URI = 'https://face-insights-672i-three.vercel.app/auth/pinterest/callback';
 
 let stateToken = ''; // To store the state parameter
 
@@ -157,7 +157,7 @@ let stateToken = ''; // To store the state parameter
 
             // Redirect to frontend dashboard with access token and pin details
             res.redirect(
-                `http://localhost:3000/dashboard?accessToken=${encodeURIComponent(access_token)}&pinId=${encodeURIComponent(pins[0]?.id || '')}`
+                `https://face-insights-672i-three.vercel.app/dashboard?accessToken=${encodeURIComponent(access_token)}&pinId=${encodeURIComponent(pins[0]?.id || '')}`
             );
 
         } catch (error) {
